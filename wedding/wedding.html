@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation: Nyasha & Christilia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* --- Base & Typography --- */
+    :root {
+      --primary-purple: #6d4c9a;
+      --soft-lilac: #e9e4f0;
+      --deep-purple: #2d214f;
+      --text-color: #4b3f69;
+      --white-bg: rgba(255, 255, 255, 0.92);
+      --font-cursive: 'Great Vibes', cursive;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-sans);
+      color: var(--text-color);
+      background-image: url('images/we.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      box-sizing: border-box;
+    }
+
+    /* --- Main Container & Animations --- */
+    .container {
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      background: var(--white-bg);
+      backdrop-filter: blur(10px); /* Frosted glass effect */
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(45, 33, 79, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      padding: 2.5rem 3rem;
+      animation: fadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- Section Styling --- */
+    .section {
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .section-title {
+      font-family: var(--font-cursive);
+      font-size: 2.8rem;
+      color: var(--primary-purple);
+      margin: 0 0 1.5rem 0;
+      font-weight: 400;
+    }
+
+    /* --- Header --- */
+    .header h2 {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--primary-purple);
+      margin: 0;
+    }
+    .header h1 {
+      font-family: var(--font-cursive);
+      font-size: 4.5rem;
+      color: var(--deep-purple);
+      margin: 0.5rem 0 0 0;
+      text-shadow: 1px 1px 10px rgba(45, 33, 79, 0.1);
+    }
+    .welcome-note {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-top: 2rem;
+        font-weight: 300;
+    }
+
+    /* --- Couple's Card --- */
+    .couple-card {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 2rem;
+    }
+    .person-details h3 {
+      font-family: var(--font-cursive);
+      font-size: 2.2rem;
+      color: var(--primary-purple);
+      margin: 0 0 0.5rem 0;
+      font-weight: 400;
+    }
+    .person-details .family {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+    .scripture {
+      font-style: italic;
+      font-weight: 300;
+      color: #776c91;
+      padding: 1rem;
+      background: rgba(233, 228, 240, 0.5);
+      border-radius: 10px;
+    }
+    .scripture strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-style: normal;
+      font-weight: 500;
+    }
+    .rings-divider img {
+      width: 70px;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(45, 33, 79, 0.1);
+      transition: transform 0.4s ease;
+    }
+    .rings-divider img:hover {
+        transform: rotate(360deg);
+    }
+
+    /* --- RSVP Section --- */
+    .rsvp-box {
+        background: #fdfcff;
+        border: 1px solid var(--soft-lilac);
+        border-radius: 15px;
+        padding: 2rem;
+    }
+    .rsvp-box p {
+        margin: 0 0 1.5rem 0;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    .rsvp-button {
+        display: inline-block;
+        background-color: var(--primary-purple);
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 1px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .rsvp-button:hover {
+        background-color: var(--deep-purple);
+        transform: translateY(-3px);
+    }
+    .rsvp-phone-intro {
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem;
+        color: var(--text-color);
+    }
+    .phone-numbers {
+        font-size: 1rem;
+        line-height: 1.7;
+        font-weight: 500;
+    }
+    .phone-numbers div {
+        margin-bottom: 0.25rem;
+    }
+    .phone-numbers strong {
+        color: var(--deep-purple);
+    }
+
+    /* --- Celebration Timeline --- */
+    .timeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+    .timeline-item {
+        padding: 1.5rem;
+    }
+    .timeline-item .icon {
+        height: 40px;
+        margin-bottom: 1rem;
+        opacity: 0.8;
+    }
+    .timeline-item h4 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--deep-purple);
+        margin: 0 0 0.5rem 0;
+    }
+    .timeline-item p {
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    /* --- Guest Info & Map --- */
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        text-align: left;
+    }
+    .info-box {
+        background: rgba(233, 228, 240, 0.4);
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+    .info-box h4 {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--deep-purple);
+        margin: 0 0 1rem 0;
+    }
+    .info-box .icon {
+        height: 24px;
+        opacity: 0.7;
+    }
+    .info-box p {
+        margin: 0;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+    .map-container {
+        margin-top: 2rem;
+    }
+    .map-container iframe {
+        width: 100%;
+        height: 350px;
+        border-radius: 15px;
+        border: 1px solid var(--soft-lilac);
+        box-shadow: 0 8px 20px rgba(45, 33, 79, 0.08);
+    }
+
+    /* --- Gallery --- */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(45, 33, 79, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05) rotate(1deg);
+      box-shadow: 0 12px 25px rgba(45, 33, 79, 0.12);
+    }
+
+    /* --- Footer --- */
+    .footer {
+      border-top: 1px solid var(--soft-lilac);
+      padding-top: 2rem;
+    }
+    .footer .final-greeting {
+        font-family: var(--font-cursive);
+        font-size: 2rem;
+        margin: 0 0 1.5rem 0;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 0 8px;
+      transition: transform 0.2s ease;
+    }
+    .social-links a:hover {
+      transform: scale(1.1);
+    }
+    .social-links img {
+      width: 32px;
+      height: 32px;
+    }
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+      body { padding: 1rem 0.5rem; }
+      .container { padding: 2rem 1.5rem; }
+      .header h1 { font-size: 3.5rem; }
+      .couple-card, .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .rings-divider {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+      }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 1.5rem 1rem; }
+      .header h1 { font-size: 2.8rem; }
+      .header h2 { font-size: 0.9rem; letter-spacing: 2px; }
+      .section-title { font-size: 2.2rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="section header">
+      <h2>Together with their families</h2>
+      <h1>Nyasha & Christilia</h1>
+      <p class="welcome-note">joyfully invite you to share in their celebration of love as they are united in marriage.</p>
+    </header>
+
+    <section class="section couple-card">
+      <div class="person-details">
+        <h3>Nyasha Chimutapira</h3>
+        <p class="family">Son of the late Mr and Mrs Chimutapira.</p>
+        <div class="scripture">
+          <strong>Proverbs 18:22</strong>
+          <span>"He who finds a wife finds what is good and receives favor from the Lord."</span>
+        </div>
+      </div>
+
+      <div class="rings-divider">
+        <img src="images/rings.jpeg" alt="Wedding Rings" />
+      </div>
+
+      <div class="person-details">
+        <h3>Christilia K. Shumba</h3>
+        <p class="family">Daughter of Mr and Mrs Shumba.</p>
+        <div class="scripture">
+          <strong>Song of Solomon 2:16</strong>
+          <span>"My beloved is mine, and I am his."</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Kindly Respond</h2>
+        <div class="rsvp-box">
+            <p>Please let us know if you will be able to join our celebration by the <strong>20th of September, 2025.</strong></p>
+            <a href="mailto:nyasha.christilia.chimutapiran@gmail.com?subject=Wedding RSVP for Nyasha & Christilia" class="rsvp-button">RSVP via Email</a>
+            <p class="rsvp-phone-intro">Alternatively, you may respond via phone:</p>
+            <div class="phone-numbers">
+                <div><strong>Groom:</strong> +263 773 867 878 / +263 779 290 051</div>
+                <div><strong>Bride:</strong> +263 778 999 908</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">The Celebration</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236d4c9a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 20h.01M18 6l-5.23 5.23a3 3 0 0 0-.83 2.12V18h0a3 3 0 0 0 3-3v-2.5a3 3 0 0 1 3-3V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v14'/%3E%3C/svg%3E" alt="Ceremony" class="icon">
+                <h4>The Ceremony</h4>
+                <p><strong>09:00</strong><br>Signature Gardens, Gweru</p>
+            </div>
+            <div class="timeline-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236d4c9a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22a10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8v2zM2 12a10 10 0 0 1 10-10V2a8 8 0 0 0-8 8h2z'/%3E%3Cpath d='M12 4V2'/%3E%3Cpath d='M12 22v-2'/%3E%3Cpath d='M20 12h2'/%3E%3Cpath d='M2 12h2'/%3E%3Cpath d='m18 18 1.5 1.5'/%3E%3Cpath d='m4.5 4.5 1.5 1.5'/%3E%3Cpath d='M18 6l-1.5 1.5'/%3E%3Cpath d='M4.5 19.5l1.5-1.5'/%3E%3Cpath d='M22 12c0 6-4.39 10-9.81 10C6.78 22 2 17.61 2 12S6.78 2 12.19 2c5.42 0 9.81 4 9.81 10z'/%3E%3C/svg%3E" alt="Cocktails" class="icon">
+                <h4>Cocktail Hour</h4>
+                <p><strong>12:00</strong><br>Refreshments & Photographs</p>
+            </div>
+            <div class="timeline-item">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236d4c9a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 2a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10z'/%3E%3Cpath d='M12 6v12'/%3E%3Cpath d='M9 10h6'/%3E%3C/svg%3E" alt="Reception" class="icon">
+                <h4>The Reception</h4>
+                <p><strong>14:00</strong><br>Dinner, Speeches & Dancing</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Guest Information</h2>
+        <div class="info-grid">
+            <div class="info-box">
+                <h4><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236d4c9a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpath d='M9 22V12h6v10'/%3E%3C/svg%3E" class="icon" alt="Accommodation"> Accommodations</h4>
+                <p>For our out-of-town guests, we recommend booking accommodations in Gweru. Several hotels and lodges are available to ensure your comfortable stay.</p>
+            </div>
+            <div class="info-box">
+                <h4><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236d4c9a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 12v10H4V12'/%3E%3Cpath d='M20 7H4'/%3E%3Cpath d='M12 2v5'/%3E%3Cpath d='M12 7a4 4 0 1 0 0 8 4 4 0 0 0 0-8z'/%3E%3C/svg%3E" class="icon" alt="Gifts"> Wishing Well</h4>
+                <p>Your presence at our wedding is the greatest gift. However, should you wish to honor us with a gift, a contribution to our wishing well would be warmly appreciated.</p>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.636997831158!2d29.83361131535556!3d-19.4284729868858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1934d60a3c2138c3%3A0x5185535c59344281!2sSignature%20Gardens!5e0!3m2!1sen!2sus!4v1663432189745!5m2!1sen!2sus" allowfullscreen="" loading="lazy" title="Map showing Signature Gardens, Gweru"></iframe>
+        </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Moments to Cherish</h2>
+      <div class="gallery-grid">
+        <img src="images/Bishop.jpg" alt="Photo of Nyasha, the Groom">
+        <img src="images/kim.jpg" alt="Photo of Christilia, the Bride">
+        <img src="images/ad.jpg" alt="Photo of the Wedding Venue">
+      </div>
+    </section>
+
+    <footer class="section footer">
+      <p class="final-greeting">With love, Nyasha & Christilia</p>
+      <div class="social-links">
+        <a href="https://wa.me/263773867878" target="_blank" rel="noopener" title="WhatsApp">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%236d4c9a'%3E%3Cpath d='M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01s-.521.074-.792.372c-.272.296-1.04 1.016-1.04 2.479s1.065 2.871 1.213 3.07.149.198 2.096 3.203c2.877 2.87 3.387 2.638 4.007 2.486.62.147 1.758.122 2.006-.025.271-.15.768-.617.878-1.211.109-.594.109-1.096.075-1.211z'/%3E%3C/svg%3E" alt="WhatsApp">
+        </a>
+        <a href="https://facebook.com/nyasha.chimutapira" target="_blank" rel="noopener" title="Facebook">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%236d4c9a'%3E%3Cpath d='M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z'/%3E%3C/svg%3E" alt="Facebook">
+        </a>
+        <a href="https://x.com/nyasha_ch" target="_blank" rel="noopener" title="X (Twitter)">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%236d4c9a'%3E%3Cpath d='M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.617l-5.21-6.817-6.022 6.817h-3.308l7.748-8.786-8.202-10.714h6.78l4.596 6.026l5.434-6.026zm-3.648 19.49h1.57l-10.556-14.018h-1.67l10.656 14.018z'/%3E%3C/svg%3E" alt="X (formerly Twitter)">
+        </a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
